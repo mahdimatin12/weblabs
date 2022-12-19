@@ -1,0 +1,321 @@
+html {
+    height: 100%;
+}
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+body {
+    max-width: 90%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+header {
+    height: 13%;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    background: rgb(255,214,94); 
+    background: linear-gradient(to left, rgb(144,144,144),rgb(0,0,0)); 
+
+}
+
+.Navbar {  
+    width: 100%;  
+    text-align: right;
+}
+
+.logo { 
+    position: absolute; 
+    color: white;
+    font-weight: bolder;    
+    left: 30px;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.logo #square {
+    color: #ff932d;
+}
+.Navbar h1 {
+    display: inline;
+    color: rgb(255,255,255);
+    margin:0;   
+    margin-right: 10px;   
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;   
+    margin: 0;  
+    padding: 0;
+
+}
+
+ul li {
+    display: inline;
+    list-style: none;    
+}
+
+
+nav a {
+
+    display: inline-block;
+    text-decoration: none;
+    width: 8%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 90%;
+    color: #ffffff;   
+    background: #ff932d;   
+    border-radius: 5px;
+    border: 1px solid #c95e00;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.7);
+    text-shadow:
+        0px -1px 1px rgba(000,000,000,0.2),
+        0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+nav a {
+    -webkit-transition: -webkit-transform .5s,
+        background-color 1s ease-in .5s;
+    transition: transform .5s,
+        background-color 1s ease-in .5s;
+}
+nav a:hover {
+    background-color: red;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+@-webkit-keyframes logo {
+    from {
+        -webkit-transform: rotate(0) scale(.5);
+        left: 120%;
+    }
+    50% {
+        -webkit-transform: rotate(-720deg) scale(.5);
+        left: 0;
+    }
+
+    to {
+        -webkit-transform: rotate(0) scale(1);
+    }
+}
+@keyframes logo {
+    from {
+        transform: rotate(0) scale(.5);
+        left: 120%
+    }
+
+    50% {
+        transform: rotate(-720deg) scale(.5);
+        left: 0;
+    }
+
+    to {
+        transform: rotate(0) scale(1);
+    }
+}
+
+.logo {
+    -webkit-animation: logo 3s;
+    animation: logo 3s;
+
+}
+
+main
+{
+    margin-top: 80px;
+    background-image: url("../picture/490.jpg");
+    background-position: center center;
+
+
+}
+
+.content {
+    max-width: 80%;
+    height: 1200px;    
+    margin-left: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: small;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+}
+
+
+
+.Content h2 {
+    color: #24486C;
+    margin-bottom: 2px;
+    font-size: small;
+}
+
+.Content p {
+    margin-top: 0px;
+}
+
+
+
+footer
+{
+    position: fixed;
+    width: 90%;
+    bottom: 0px;
+    height: 30px; 
+    background-color: black;
+    border-top: thin solid black;
+    text-align: center;
+    border: 1px solid black;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+
+}
+
+
+#clock {
+    opacity: 1;
+    color: #ff932d; 
+    font-size: 1em;
+    margin-top: 0;
+    font-weight:bolder;
+}
+
+input:focus {
+    background-color: white;
+    color: black;
+}
+
+input:required {
+    background-color: lightyellow;
+}
+
+label {
+    float: left;
+    width: 150px;
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;  
+    color: black;   
+}
+
+
+/* add form styles here */
+form {
+    width: 60%;
+    font-size: 1em;    
+    font-family:Tahoma, Geneva, sans-serif;
+    margin-left: 20%;
+}
+
+fieldset {
+    border-left-style: none;
+    border-right-style: none;    
+}
+
+
+
+form input[type="submit"]  {
+
+    margin-left: 30%;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.8em;
+    color: white;
+    background: #6E97BF;
+    border-radius: 5px;
+    box-shadow: 0 0 4px white;
+}
+
+form input[type="submit"]:hover {
+    background: coral;
+}
+
+#cancelbtn {
+    border: 2px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.8em;
+    color: white;
+    background: #6E97BF;
+    border-radius: 5px;
+    box-shadow: 0 0 4px white;
+
+}
+
+
+
+
+#cancelbtn:hover {
+    background: coral;
+
+}
+
+
+
+form input[type="text"],input[type="email"],input[type="password"],input[type="date"] {
+
+    border: none;
+    background-color: rgba(255,255,255,.5);
+    color: black;
+    font-size: 1em;
+    box-shadow: inset 0 0 10px rgba(255,255,255,.75);
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 10%;
+
+}
+form input[type="text"]:focus, .subform textarea:focus {
+    background-color: white;
+    color: black;
+}
+
+legend {
+    text-align: center;
+    color: #ff932d;
+}
+
+legend span{
+    color: red;
+}
+
+#updated {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+#please {
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+
+}
+
+.navbar-brand {
+    margin-left: 40%;
+
+}
+
+
+/*
+new table style
+*/
+
+table {
+    background-color: blue;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<admins>
+    <admin>
+        <ID>888000</ID>
+        <name>Thomas Muller</name>
+        <email>thomas.muller@example.com</email>
+        <password>Helloworld123</password>
+        <DOB>1995-02-12</DOB>       
+    </admin>
+    <admin>
+        <ID>777000</ID>
+        <name>Jorgen Kholer</name>
+        <email>jorgen.kholer@example.com</email>
+        <password>Helloworld123</password>
+        <DOB>1976-02-03</DOB>        
+    </admin>
+</admins>

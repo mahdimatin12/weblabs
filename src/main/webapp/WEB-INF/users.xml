@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="xsl/users.xsl"?>
+<users>          
+    <user>
+        <ID>834281</ID>
+        <name>John Smith</name>
+        <email>john.smith@example.com</email>
+        <password>Helloworld123</password>
+        <dob>02-12-1999</dob>        
+    </user>    
+    <user>
+        <ID>608493</ID>
+        <name>Alice Ming</name>
+        <email>alice.mom@example.com</email>
+        <password>Helloworld123</password>
+        <dob>02-03-1990</dob>       
+    </user>
+</users>
