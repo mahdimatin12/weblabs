@@ -29,7 +29,7 @@
 
             if (admin != null) {
                 session.setAttribute("admin", admin);
-                response.sendRedirect("admin3.jsp");
+                response.sendRedirect("admin5.jsp");
             } else {
                 session.setAttribute("error", "Admin does not exist");
                 response.sendRedirect("admin.jsp");
