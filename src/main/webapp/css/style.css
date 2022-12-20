@@ -15,16 +15,17 @@ body {
 }
 
 header {
-    height: 13%;
+    height: 15%;
     position: fixed;
     width: 90%;
-    top: 0;
+    top: 0;   
     background: rgb(255,214,94); 
     background: linear-gradient(to left, rgb(144,144,144),rgb(0,0,0)); 
 
 }
 
-.Navbar {  
+.Navbar { 
+    margin: 0;
     width: 100%;  
     text-align: right;
 }
@@ -41,12 +42,17 @@ header {
 .logo #square {
     color: #ff932d;
 }
+.Navbar h1 span{color:  #ff932d;}
+.Navbar h2 {margin-top: 0;
+            margin-right: 10px;
+            color: #ff932d;}
+
 .Navbar h1 {
+   
     display: inline;
-    color: rgb(255,255,255);
-    margin:0;   
+    color: whitesmoke;
     margin-right: 10px;   
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 ul {
@@ -144,7 +150,7 @@ main
     margin-left: 5%;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: small;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 5px;
     padding-left: 50px;
     padding-right: 50px;
@@ -215,7 +221,7 @@ form {
     width: 60%;
     font-size: 1em;    
     font-family:Tahoma, Geneva, sans-serif;
-    margin-left: 20%;
+    margin-left: 25%;
 }
 
 fieldset {
@@ -234,7 +240,8 @@ form input[type="submit"]  {
     color: white;
     background: #6E97BF;
     border-radius: 5px;
-    box-shadow: 0 0 4px white;
+    border: 1px solid black;
+
 }
 
 form input[type="submit"]:hover {
@@ -242,7 +249,7 @@ form input[type="submit"]:hover {
 }
 
 #cancelbtn {
-    border: 2px solid black;
+    border: 1px solid black;
     text-decoration: none;
     cursor: pointer;
     padding: 8px 15px;
@@ -311,11 +318,3 @@ legend span{
 
 }
 
-
-/*
-new table style
-*/
-
-table {
-    background-color: blue;
-}

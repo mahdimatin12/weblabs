@@ -21,7 +21,7 @@
             <div class="Navbar">
                 <p class="logo">SI<span id="square">&squarf;</span></p><br>
                 <p class="logo">UA</p>
-                <h1>Step It Up Australia</h1>
+                <h1>Step It <span>Up</span> Australia</h1>
                 <nav>
                     <ul>
                         <li><a class="button" href="admin.jsp"> Admin </a></li>
