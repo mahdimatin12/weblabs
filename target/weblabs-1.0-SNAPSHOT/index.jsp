@@ -42,6 +42,7 @@
                     <h4>All string literals in Java programs, such as "abc", are implemented as instances of this class.</h4>
                     <p>Strings are constant; their values cannot be changed after they are created.<br>
                         String buffers support mutable strings. Because String objects are immutable they can be shared.</p>
+                    <p>Zaki is coding ...</p>
                 </div>
             </article>
         </main>
