@@ -14,6 +14,7 @@
         <link href="css/style.css" rel="stylesheet">
         <title>Admin Action Page</title>
     </head>
+    
     <body>
         <% String filename = application.getRealPath("/WEB-INF/admin.xml");%>
         <jsp:useBean id="adminDAO" class="com.model.dao.AdminDAO" scope="application">

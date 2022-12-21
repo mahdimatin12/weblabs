@@ -1,6 +1,5 @@
 com\model\Admins.class
 com\app\TransformerApp.class
-com\utils\In.class
 com\model\Admin.class
 com\model\dao\UserDAO.class
 com\app\JAXBapp.class

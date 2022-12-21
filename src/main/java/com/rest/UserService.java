@@ -21,7 +21,7 @@ import javax.xml.bind.JAXBException;
 
 /**
  *
- * @author George
+ * 
  */
 @Path("userapi")
 public class UserService {

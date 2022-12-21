@@ -11,6 +11,11 @@
 
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="js/time.js"></script>
+        <style>
+            input[type="text"]{
+                margin-left:-100px; 
+            }
+        </style>
     </head>
 
     <body onload="startTime()">
@@ -20,29 +25,38 @@
                 <p class="logo">UA</p>
                 <h1>Step It <span>Up</span> Australia</h1>
                 <h2>ADMIN</h2>
-                
+
             </div>
         </header>
         <main>
             <article>
                 <div class="content">
-                    
-        <%
-            session.invalidate();
-            request.setAttribute("email", null);
-            request.removeAttribute("email");
-        %>        
-        <% 
-            String xslPath = application.getRealPath("/xsl/users.xsl");
-            XmlTransformer transformer = new XmlTransformer();
-            transformer.transform(xslPath, UserServiceClient.xmlPath(), new StreamResult(out));
-        %>
-        
-        
+                    <form action="adminsearch.jsp" method="POST">
+                        <input name="id" type="text" placeholder="search here" id="id">
+                        <input type="submit" value="search">
+
+                    </form> 
+                    <%
+                        //int  id = Integer.parseInt(request.getParameter("id"));
+
+                    %>
+
+                    <%  session.invalidate();
+                        request.setAttribute("email", null);
+                        request.removeAttribute("email");
+                    %>        
+                    <%
+                        String xslPath = application.getRealPath("/xsl/users.xsl");
+                        XmlTransformer transformer = new XmlTransformer();
+                        transformer.transform(xslPath, UserServiceClient.xmlPath(), new StreamResult(out));
+                        //transformer.transform(xslPath, UserServiceClient.fetchUser(id), new StreamResult(out));
+                    %>
+                  
+
                 </div>
             </article>
         </main>
-         <footer>
+        <footer>
             <p id="clock"></p>
         </footer>
     </body>
