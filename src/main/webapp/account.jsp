@@ -63,12 +63,12 @@
                     <div style="margin: auto;">
                         <form method="POST" action="account.jsp">
                             <table class="table" style="width: 70%;">
-                                <caption style="background-color:gray;border-radius:10px;padding:10px;color:white;">Edit User <span class="message"><%= (submitted != null) ? "Update is Successful" : ""%></span></caption>
-                                <tr><td>ID: </td><td><input style="width: 70%;" type="text" name="ID" value="<%= user.getID()%>" readonly="true" /></td></tr>
-                                <tr><td>Name: </td><td><input style="width: 70%;" type="text" name="name" value="<%= user.getName()%>" /></td></tr>
-                                <tr><td>Email: </td><td><input style="width: 70%;" type="text" name="email" value="<%= user.getEmail()%>" readonly="true"/></td></tr>
-                                <tr><td>Password: </td><td><input style="width: 70%;" type="password" name="password" value="<%= user.getPassword()%>" /></td></tr>
-                                <tr><td>DOB: </td><td><input style="width: 70%;" type="date" name="dob" value="<%= user.getDob()%>"/></td></tr>
+                                <caption>Edit User <span class="message"><%= (submitted != null) ? "Update is Successful" : ""%></span></caption>
+                                <tr><td>ID: </td><td><input type="text" name="ID" value="<%= user.getID()%>" readonly="true" /></td></tr>
+                                <tr><td>Name: </td><td><input type="text" name="name" value="<%= user.getName()%>" /></td></tr>
+                                <tr><td>Email: </td><td><input type="text" name="email" value="<%= user.getEmail()%>" readonly="true"/></td></tr>
+                                <tr><td>Password: </td><td><input type="password" name="password" value="<%= user.getPassword()%>" /></td></tr>
+                                <tr><td>DOB: </td><td><input type="date" name="dob" value="<%= user.getDob()%>"/></td></tr>
                                 <tr><input type="hidden" name="submitted" value="submitted"></tr>
                                 <tr>
                                     <td>
@@ -79,7 +79,7 @@
                                         <%}%>
                                     </td>
                                     <td>
-                                        <input style="margin-right: 10px;" id="cancelbtn" type="submit" value="Update" /> 
+                                        <input 10px;" id="cancelbtn" type="submit" value="Update" /> 
                                         <a id="cancelbtn" href="delete.jsp">Delete</a>
                                     </td>
                                 </tr>

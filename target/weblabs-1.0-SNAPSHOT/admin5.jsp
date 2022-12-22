@@ -15,6 +15,9 @@
             input[type="text"]{
                 margin-left:-100px; 
             }
+            input {
+                display: inline-block;
+            }
         </style>
     </head>
 

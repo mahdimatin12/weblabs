@@ -30,7 +30,7 @@
                 padding: 5x 15px;
                 font-size: 1em;                              
                 border-radius: 5px;               
-                background-color: hsl(213, 73%, 20%);
+                background-color: gray;
                 color: white;
             }
 

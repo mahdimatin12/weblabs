@@ -28,7 +28,7 @@ public class UserServiceClient {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         
-        File file = new File("C:\\SIUA\\MySIUA\\group2\\weblabs\\src\\main\\webapp\\WEB-INF\\usergen.xml");        
+        File file = new File("C:\\Users\\236347\\Documents\\NetBeansProjects\\weblabs\\src\\main\\webapp\\WEB-INF\\usergen.xml");        
         if(!file.exists())
             file.createNewFile();
         
@@ -58,7 +58,7 @@ public class UserServiceClient {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         
-        File file = new File("C:\\SIUA\\MySIUA\\group2\\weblabs\\src\\main\\webapp\\WEB-INF\\usergen.xml");        
+        File file = new File("C:\\Users\\236347\\Documents\\NetBeansProjects\\weblabs\\src\\main\\webapp\\WEB-INF\\usergen.xml");        
         if(!file.exists())
             file.createNewFile();
         
