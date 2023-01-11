@@ -17,6 +17,9 @@ public class Users implements Serializable{
     public void add(User user){
         this.users.add(user);
     }
+     public void addAll(List<User> temp){
+        this.users.addAll(temp);
+    }
     
     public User user(String email, String password){
         return this.users.stream().filter(user -> user.login(email, password)).findAny().orElse(null);

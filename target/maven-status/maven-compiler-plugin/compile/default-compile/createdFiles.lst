@@ -1,6 +1,8 @@
 com\model\Admins.class
 com\model\dao\SQLConnector.class
+com\model\dao\UserSqlDAO.class
 com\app\TransformerApp.class
+com\rest\UserSqlService.class
 com\utils\In.class
 com\model\Admin.class
 com\model\dao\UserDAO.class
@@ -13,6 +15,8 @@ com\model\User.class
 com\model\Maths.class
 com\model\Rectangle.class
 com\model\dao\AdminDAO.class
+com\app\UserSqlApp.class
 com\model\Circle.class
 com\model\dao\XmlTransformer.class
+com\model\dao\AdminSqlDAO.class
 com\rest\UserService.class

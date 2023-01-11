@@ -32,6 +32,15 @@ public class User implements Serializable {
 
     }
 
+    public User(int ID, String name, String email, String password, String dob) {
+        this.ID = ID;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.dob = dob;
+    }
+    
+
     public User(String name, String email, String password, String dob) {
         this.ID = (new Random()).nextInt(999999);
         this.name = name;
