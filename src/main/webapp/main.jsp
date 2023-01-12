@@ -1,8 +1,3 @@
-<%-- 
-    Document   : main
-    Created on : 29 Nov. 2022, 3:47:48 pm
-    Author     : 236347
---%>
 <%@page import="com.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,16 +7,52 @@
         <title>Welcome</title>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="js/time.js"></script>
+        <style>
+            table {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                width: 100%;
+                margin-top: 25px;
+                border-collapse: collapse;
+            }
+            caption {
+                text-align: right;
+                font-size: .85em;
+                margin-bottom: 10px;
+            }
+            th, td {
+                font-size: 1.1em;
+                border: 1px solid #DDB575;
+                padding: 3px 7px 2px 7px;
+            }
+            th {
+                text-transform:uppercase;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background: rgb(229,76,16);
+                background: linear-gradient(to bottom, rgb(229,76,16), rgb(173,54,8));
+                color: white;
+            }
+            tr:nth-of-type(even){
+                background-color: rgba(255,255,255,.1);
+            }
+            tr:nth-of-type(odd){
+                background-color: rgba(229,76,16,.1);
+            }
+
+
+
+
+        </style>
     </head>
 
     <body onload="startTime()">
-        <% String filename = application.getRealPath("/WEB-INF/users.xml");%>
-        <jsp:useBean id="userDAO" class="com.model.dao.UserDAO" scope="application">
-            <jsp:setProperty name="userDAO" property="fileName" value="<%=filename%>"/>
-        </jsp:useBean>
+
 
         <%
             User user = (User) session.getAttribute("user");
+           
+
         %>
         <header>
 
@@ -53,12 +84,15 @@
                         </colgroup>
                         <thead>
                             <tr>
+                               
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Date of Birth</th>
                             </tr>
                         </thead>
                         <tr>
+                            
+                           
                             <td> <%= user.getName()%></td>
                             <td> <%= user.getEmail()%></td>
                             <td> <%= user.getDob()%></td>

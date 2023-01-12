@@ -19,7 +19,7 @@ public class SqlDB {
         Map<String,String> variables = System.getenv();
         String password = variables.get("dbpassword");
         
-        InputStream propsInputStream = new FileInputStream("C:\\Users\\236357\\Documents\\NetBeansProjects\\weblabs\\src\\resources\\db.properties");
+        InputStream propsInputStream = new FileInputStream("C:\\Users\\236347\\Documents\\NetBeansProjects\\weblabs\\src\\resources\\db.properties");
         Properties properties = new Properties();
         properties.load(propsInputStream);
         

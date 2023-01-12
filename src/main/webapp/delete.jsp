@@ -1,9 +1,4 @@
-<%-- 
-    Document   : delete
-    Created on : Dec 7, 2022, 10:57:56 AM
-    Author     : George
---%>
-
+<%@page import="com.model.dao.UserSqlDAO"%>
 <%@page import="com.model.Users"%>
 <%@page import="com.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,30 +9,50 @@
         <title>Delete Page</title>
         <link rel="stylesheet" href="css/style.css"/>
         <script type="text/javascript" src="js/index.js"></script>
+         <script type="text/javascript" src="js/time.js"></script>
     </head>
-    <body>
-        <%!
-            User user;
-        %>
-        <% String filename = application.getRealPath("/WEB-INF/users.xml");%>
-        <jsp:useBean id="userDAO" class="com.model.dao.UserDAO" scope="application">
-            <jsp:setProperty name="userDAO" property="fileName" value="<%=filename%>"/>
-        </jsp:useBean>
-        <%
-            Users users = userDAO.getUsers();
-            String emailView = (String) session.getAttribute("emailView");
-            if (emailView != null) {
-                user = users.user(emailView);
-            }else{
-                user = (User) session.getAttribute("user");
-            }
+    <body onload="startTime()">
+        <header>
+           <div class="Navbar">
+                <p class="logo">SI<span id="square">&squarf;</span></p><br>
+                <p class="logo">UA</p>
+                <h1>Step It Up Australia</h1>
+                <nav>
+                    <ul>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="content">
+                    <%!
+                        User user;
+                    %>
 
-            if (user != null) {
-                userDAO.delete(users, user);
-        %>
-                <h2><%= user.getName()%> record has been deleted!</h2>
-            <%}%>
-        <% session.invalidate();%>
-        <p class="message">You have been logged out click <a href="admin.jsp">here </a> to go back home</p>   
+                    <%
+                        UserSqlDAO userSqlDAO = (UserSqlDAO) session.getAttribute("userSqlDAO");
+
+                        String emailView = (String) session.getAttribute("emailView");
+                        if (emailView != null) {
+                            user = userSqlDAO.getUser(emailView);
+                        } else {
+                            user = (User) session.getAttribute("user");
+                        }
+
+                        if (user != null) {
+                            userSqlDAO.delete(user.getID());
+                    %>
+                    <h2><%= user.getName()%> record has been deleted!</h2>
+                    <%}%>
+
+                    <p class="message">Click <a href="admin1.jsp">here </a> to view user list</p>   
+                </div>
+            </article>
+        </main>
+                    <footer>
+                         <p id="clock"></p>
+                    </footer>
     </body>
 </html>

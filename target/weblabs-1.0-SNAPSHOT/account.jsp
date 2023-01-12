@@ -1,3 +1,4 @@
+<%@page import="com.model.dao.UserSqlDAO"%>
 <%@page import="com.model.Users"%>
 <%@page import="com.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -8,6 +9,41 @@
         <title>Account</title>
         <link rel="stylesheet" href="css/style.css"/>
         <script type="text/javascript" src="js/time.js"></script>
+
+        <style>
+            table {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                width: 100%;
+                margin-top: 25px;
+                border-collapse: collapse;
+            }
+            caption {
+                text-align: right;
+                font-size: .85em;
+                margin-bottom: 10px;
+            }
+            th, td {
+                font-size: 1.1em;
+                border: 1px solid #DDB575;
+                padding: 3px 7px 2px 7px;
+            }
+            th {
+                text-transform:uppercase;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background: rgb(229,76,16);
+                background: linear-gradient(to bottom, rgb(229,76,16), rgb(173,54,8));
+                color: white;
+            }
+            tr:nth-of-type(even){
+                background-color: rgba(255,255,255,.1);
+            }
+            tr:nth-of-type(odd){
+                background-color: rgba(229,76,16,.1);
+            }
+
+        </style>
     </head>
     <body onload="startTime()"> 
         <header>       
@@ -22,27 +58,26 @@
                 </nav>
             </div>
         </header>
-        
+
         <main>
             <article>
                 <div class="content">
                     <%!
                         User user;
+                        User userid;
                     %>
-                    <% String filename = application.getRealPath("/WEB-INF/users.xml");%>
-                    <jsp:useBean id="userDAO" class="com.model.dao.UserDAO" scope="application">
-                        <jsp:setProperty name="userDAO" property="fileName" value="<%=filename%>"/>
-                    </jsp:useBean>
+
                     <%
+                        UserSqlDAO userSqlDAO = (UserSqlDAO) session.getAttribute("userSqlDAO");
                         String submitted = request.getParameter("submitted");
                         String emailView = request.getParameter("emailView");
-                        Users users = userDAO.getUsers();
 
                         if (emailView != null) {
-                            user = users.user(emailView);
+                            user = userSqlDAO.getUser(emailView);
                             session.setAttribute("emailView", emailView);
                         } else {
                             user = (User) session.getAttribute("user");
+
                         }
 
                         if (submitted != null && submitted.equals("submitted")) {
@@ -53,15 +88,15 @@
                             String dob = request.getParameter("dob");
                             emailView = (String) session.getAttribute("emailView");
                             if (emailView != null) {
-                                user = users.user(emailView);
+                                user = userSqlDAO.getUser(emailView);
                             }
                             user.update(ID, name, email, password, dob);
-                            userDAO.update(users, user);
+                            userSqlDAO.update(name, password, dob, ID);
                             session.setAttribute("user", user);
                         }
                     %>
                     <div style="margin: auto;">
-                        <form method="POST" action="account.jsp">
+                        <form style="width:100%" method="POST" action="account.jsp">
                             <table class="table" style="width: 70%;">
                                 <caption>Edit User <span class="message"><%= (submitted != null) ? "Update is Successful" : ""%></span></caption>
                                 <tr><td>ID: </td><td><input type="text" name="ID" value="<%= user.getID()%>" readonly="true" /></td></tr>
@@ -73,9 +108,9 @@
                                 <tr>
                                     <td>
                                         <% if (emailView != null) { %>
-                                        <a id="cancelbtn" href="admin3.jsp">Accounts</a> 
+                                        <a id="cancelbtn" href="adminView.jsp">Accounts</a> 
                                         <%} else { %>
-                                        <a class="button" href="main.jsp">Dashboard</a>
+                                        <a id="dashboardbtn" href="main.jsp">Dashboard</a>
                                         <%}%>
                                     </td>
                                     <td>

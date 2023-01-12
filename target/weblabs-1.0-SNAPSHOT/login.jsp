@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 29 Nov. 2022, 2:56:01 pm
-    Author     : 236347
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +9,7 @@
     </head>
 
     <body onload="startTime()">
-
+        
 
         <header>          
 

@@ -48,7 +48,7 @@ header {
             color: #ff932d;}
 
 .Navbar h1 {
-   
+
     display: inline;
     color: whitesmoke;
     margin-right: 10px;   
@@ -318,3 +318,18 @@ legend span{
 
 }
 
+#dashboardbtn {
+    border: 1px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.8em;
+    color: white;
+    background: #6E97BF;
+    border-radius: 5px;
+    box-shadow: 0 0 4px white;
+}
+
+#dashboardbtn:hover {
+     background: coral;
+}

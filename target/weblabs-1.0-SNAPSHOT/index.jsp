@@ -4,6 +4,10 @@
     Author     : 61426
 --%>
 
+<%@page import="com.model.dao.SQLConnector"%>
+<%@page import="com.model.dao.AdminSqlDAO"%>
+<%@page import="com.model.dao.UserSqlDAO"%>
+<%@page import="java.util.Random"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +20,16 @@
     </head>
 
     <body onload="startTime()">
+        
+           <%
+            if (session.isNew()) {                             
+                String userID = "" + (new Random().nextInt(999));
+                session.setAttribute("userid", userID);
+                Integer count = new Integer(0);
+                session.setAttribute("counter", count);
+            }
+
+        %>
 
         <header>       
             <div class="Navbar">
@@ -41,17 +55,19 @@
                     <h1>The Java String Class</h1>
                     <h3>The String class represents character strings.</h3>
                     <h4>All string literals in Java programs, such as "abc", are implemented as instances of this class.</h4>
-                    <p>Strings are constant; their values cannot be changed after they are created.<br>
-                        String buffers support mutable strings. Because String objects are immutable they can be shared.</p>
-                    <p>Zaki is coding ...</p>
-                    <p>Mahdi is coding...</p>
-                    <p>Ramya is coding...</p>
-                    <p>Shylaja is coding ...</p>
+                   
                 </div>
             </article>
         </main>
         <footer>
             <p id="clock"></p>
         </footer>
+         <% 
+            UserSqlDAO userSqlDAO = new UserSqlDAO(new SQLConnector().connection());
+            AdminSqlDAO adminSqlDAO = new AdminSqlDAO(new SQLConnector().connection());        
+            session.setAttribute("adminSqlDAO", adminSqlDAO);
+            session.setAttribute("userSqlDAO", userSqlDAO);
+        
+        %>
     </body>
 </html>
