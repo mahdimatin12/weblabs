@@ -62,12 +62,6 @@
         <footer>
             <p id="clock"></p>
         </footer>
-         <% 
-            UserSqlDAO userSqlDAO = new UserSqlDAO(new SQLConnector().connection());
-            AdminSqlDAO adminSqlDAO = new AdminSqlDAO(new SQLConnector().connection());        
-            session.setAttribute("adminSqlDAO", adminSqlDAO);
-            session.setAttribute("userSqlDAO", userSqlDAO);
-        
-        %>
+         <jsp:include page="/InitServlet" flush="true"/>
     </body>
 </html>

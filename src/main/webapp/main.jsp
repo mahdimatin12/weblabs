@@ -63,8 +63,8 @@
                 <h1>Your Dashboard Page</h1>
                 <nav>
                     <ul class="nav">
-                        <li><a class="button" href="account.jsp"> Account </a></li>
-                        <li><a class="button" href="logout.jsp"> Logout </a></li>
+                        <li><a class="button" href="/weblabs/MainServlet"> Account </a></li>
+                        <li><a class="button" href="/weblabs/LogoutServlet"> Logout </a></li>
                     </ul>
 
                 </nav>

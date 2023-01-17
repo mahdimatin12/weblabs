@@ -37,7 +37,7 @@
                         String error = (String) session.getAttribute("error");
                        
                     %>
-                    <form method="POST" id="registerForm" action="loginAction.jsp">       
+                    <form method="POST" id="registerForm" action="/weblabs/LoginServlet">       
                         <fieldset>
                             <legend>
                                 <%= (error != null) ?error: "Login Details"%>

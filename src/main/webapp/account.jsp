@@ -62,41 +62,16 @@
         <main>
             <article>
                 <div class="content">
-                    <%!
-                        User user;
-                        User userid;
-                    %>
 
                     <%
                         UserSqlDAO userSqlDAO = (UserSqlDAO) session.getAttribute("userSqlDAO");
-                        String submitted = request.getParameter("submitted");
+                        User user = (User) session.getAttribute("user");
                         String emailView = request.getParameter("emailView");
+                        String submitted = request.getParameter("submitted");
 
-                        if (emailView != null) {
-                            user = userSqlDAO.getUser(emailView);
-                            session.setAttribute("emailView", emailView);
-                        } else {
-                            user = (User) session.getAttribute("user");
-
-                        }
-
-                        if (submitted != null && submitted.equals("submitted")) {
-                            int ID = Integer.parseInt(request.getParameter("ID"));
-                            String name = request.getParameter("name");
-                            String email = request.getParameter("email");
-                            String password = request.getParameter("password");
-                            String dob = request.getParameter("dob");
-                            emailView = (String) session.getAttribute("emailView");
-                            if (emailView != null) {
-                                user = userSqlDAO.getUser(emailView);
-                            }
-                            user.update(ID, name, email, password, dob);
-                            userSqlDAO.update(name, password, dob, ID);
-                            session.setAttribute("user", user);
-                        }
                     %>
                     <div style="margin: auto;">
-                        <form style="width:100%" method="POST" action="account.jsp">
+                        <form style="width:100%" method="POST" action="/weblabs/AccountServlet">
                             <table class="table" style="width: 70%;">
                                 <caption>Edit User <span class="message"><%= (submitted != null) ? "Update is Successful" : ""%></span></caption>
                                 <tr><td>ID: </td><td><input type="text" name="ID" value="<%= user.getID()%>" readonly="true" /></td></tr>
@@ -115,7 +90,7 @@
                                     </td>
                                     <td>
                                         <input 10px;" id="cancelbtn" type="submit" value="Update" /> 
-                                        <a id="cancelbtn" href="delete.jsp">Delete</a>
+                                        <a id="cancelbtn" href="/weblabs/DeleteServlet">Delete</a>
                                     </td>
                                 </tr>
                             </table>
