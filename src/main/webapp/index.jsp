@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Home
-    Created on : 27 Nov. 2022, 9:41:44 am
-    Author     : 61426
---%>
-
 <%@page import="com.model.dao.SQLConnector"%>
 <%@page import="com.model.dao.AdminSqlDAO"%>
 <%@page import="com.model.dao.UserSqlDAO"%>
@@ -52,10 +46,8 @@
             
             <article>
                 <div class="content">
-                    <h1>The Java String Class</h1>
-                    <h3>The String class represents character strings.</h3>
-                    <h4>All string literals in Java programs, such as "abc", are implemented as instances of this class.</h4>
-                   
+                    <p>--The <strong>Java</strong> String Class</p>
+                    
                 </div>
             </article>
         </main>

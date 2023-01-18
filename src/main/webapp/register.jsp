@@ -48,8 +48,8 @@
                             <input name="dob" id="dob" type="date"><br>
 
                             <p>                       
-                                <input type="submit" value="Sign Up">
-                                <a href="index.jsp" id="cancelbtn">Cancel</a>
+                                <input style="background: gray" type="submit" value="Sign Up">
+                                <a style="background: gray" href="index.jsp" id="cancelbtn">Cancel</a>
                             </p>
 
                         </fieldset>             
