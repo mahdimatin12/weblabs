@@ -52,7 +52,7 @@
                         String exist = (String) session.getAttribute("error");
                     %>
                     <div>
-                        <form method="POST" action="adminView.jsp">
+                        <form method="POST" action="/weblabs/AdminServlet">
                             <table class="table" style="width: 100%;">
                                 <caption><b>Sign In As Admin</b> <span class="message"><%= (exist != null) ? exist : ""%></span></caption>
                                 <tr><td><input style="width: 80%;" type="text" name="email" placeholder="Enter your email" /></td></tr>

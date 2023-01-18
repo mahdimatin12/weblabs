@@ -2,6 +2,7 @@ com\model\Admins.class
 com\controller\LoginServlet.class
 com\model\dao\UserSqlDAO.class
 com\controller\MainServlet.class
+com\controller\AdminServlet.class
 com\controller\DeleteServlet.class
 com\app\JAXBapp.class
 com\controller\InitServlet.class
@@ -16,6 +17,7 @@ com\rest\UserService.class
 com\model\dao\SQLConnector.class
 com\app\TransformerApp.class
 com\rest\UserSqlService.class
+com\controller\RegisterServlet.class
 com\utils\In.class
 com\model\Admin.class
 com\model\dao\UserDAO.class

@@ -28,7 +28,7 @@
                     <%
                         String exist = (String) session.getAttribute("error");
                     %>            
-                    <form method="POST" id="registerForm" action="welcome.jsp">                      
+                    <form method="POST" id="registerForm" action="/weblabs/RegisterServlet">                      
 
                         <fieldset>
                             <legend>

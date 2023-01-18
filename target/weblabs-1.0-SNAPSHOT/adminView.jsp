@@ -1,8 +1,4 @@
-<%-- 
-    Document   : adminAction
-    Created on : Dec 14, 2022, 1:50:21 PM
-    Author     : George
---%>
+
 
 <%@page import="com.model.dao.AdminSqlDAO"%>
 <%@page import="com.model.Admin"%>
@@ -52,7 +48,7 @@
         <main>
             <article>
                 <div class="content">
-                    <h2 href="admin1.jsp">admin: <span style="color: darkorange"><%=admin.getName()%></span></h2>
+                    <h2>Admin: <span style="color: darkorange"><%=admin.getName()%></span></h2>
                 </div>
             </article>
 
