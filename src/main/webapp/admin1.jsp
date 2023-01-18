@@ -11,7 +11,7 @@
         <title>Admin View</title>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="js/time.js"></script>
-
+        
         <style>
             .searchForm {
                 position: absolute;
@@ -40,7 +40,7 @@
 
         </style>
     </head>
-    <body> 
+    <body onload="startTime()"> 
         <header>
             <div class="Navbar">
                 <p class="logo">SI<span id="square">&squarf;</span></p><br>
@@ -86,7 +86,7 @@
         </main>
 
         <footer>
-
+            <p id="clock"></p>
         </footer>
     </body>
 </html>
