@@ -24,6 +24,10 @@
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>com.controller.AdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminSearchServlet</servlet-name>
+        <servlet-class>com.controller.AdminSearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InitServlet</servlet-name>
         <url-pattern>/InitServlet</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminSearchServlet</servlet-name>
+        <url-pattern>/AdminSearchServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

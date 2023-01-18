@@ -21,6 +21,7 @@ com\controller\RegisterServlet.class
 com\utils\In.class
 com\model\Admin.class
 com\model\dao\UserDAO.class
+com\controller\AdminSearchServlet.class
 com\model\dao\SqlDB.class
 com\model\User.class
 com\controller\LogoutServlet.class

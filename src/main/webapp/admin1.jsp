@@ -11,10 +11,38 @@
         <title>Admin View</title>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="js/time.js"></script>
+
+        <style>
+            .searchForm {
+                position: absolute;
+                display: inline;
+                float: left;
+                left: 0;
+                margin-right: 0;
+                margin-left: 100px;
+            }
+
+            #searchbtn {
+                margin-left: 0;
+                background-color: gray;
+
+            }
+            #searchbtn:hover {
+                color: darkorange;
+            }
+
+            #id {
+                border: 1px solid black;
+              
+                              
+
+            }
+
+        </style>
     </head>
     <body> 
         <header>
-             <div class="Navbar">
+            <div class="Navbar">
                 <p class="logo">SI<span id="square">&squarf;</span></p><br>
                 <p class="logo">UA</p>
                 <h1>Step It <span>Up</span> Australia</h1>
@@ -23,12 +51,17 @@
                         <li><a class="button" href="index.jsp"> Home </a></li>
                     </ul>
                 </nav>
-             </div>
+            </div>
         </header>
 
         <main>
             <article>
                 <div class="content">
+                    <form class="searchForm" action="/weblabs/AdminSearchServlet" method="POST">
+                        <input name="id" type="text" id="id" placeholder="search...">
+                        <input id="searchbtn" type="submit" value="search">
+
+                    </form> 
 
                     <%
                         request.setAttribute("email", null);
